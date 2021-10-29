@@ -1,11 +1,12 @@
 import React from 'react';
-import useFirebase from '../../../Hooks/useFirebase';
+import useAuth from '../../../Hooks/useAuth';
+// import useFirebase from '../../../Hooks/useFirebase';
 import './Login.css';
 
 const Login = () => {
-  const { signInUsingGoogle } = useFirebase();
+  const { signInUsingGoogle } = useAuth();
   return (
-    <div>
+    <div className="">
       <div className="login-container">
         <div className="login-img">
           <img src="./images/login.jpg" alt="" />
