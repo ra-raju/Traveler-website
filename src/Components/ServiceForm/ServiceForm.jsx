@@ -1,12 +1,23 @@
 import { useForm } from 'react-hook-form';
+const axios = require('axios').default;
 
 const ServiceForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    // console.log(data);
+    axios.post('http://localhost:5000/addservice', data).then((res) => {
+      const id = res.data.insertedId;
+      if (id) {
+        alert('service is added!');
+        reset();
+      }
+    });
+  };
   return (
     <div>
       <h1 className="text-center py-4">Add Service</h1>
@@ -57,16 +68,58 @@ const ServiceForm = () => {
         </div>
         {/* photo */}
         <div className="">
-          <label htmlFor="photo" className="form-label ">
-            Photo Url
+          <label htmlFor="photo" className="form-label  ">
+            Photo Url 1
           </label>
           <input
             type="url"
             className="form-control"
             id="photo"
-            {...register('photoUrl', { required: true })}
+            {...register('photoUrl1', { required: true })}
           />
-          {errors.photoUrl && (
+          {errors.photoUrl1 && (
+            <span className="error-message">This field is required</span>
+          )}
+        </div>
+        <div className="">
+          <label htmlFor="photo" className="form-label  ">
+            Photo Url 2
+          </label>
+          <input
+            type="url"
+            className="form-control"
+            id="photo"
+            {...register('photoUrl2', { required: true })}
+          />
+          {errors.photoUrl2 && (
+            <span className="error-message">This field is required</span>
+          )}
+        </div>
+        <div className="">
+          <label htmlFor="photo" className="form-label  ">
+            Photo Url 3
+          </label>
+          <input
+            type="url"
+            className="form-control"
+            id="photo"
+            {...register('photoUrl3', { required: true })}
+          />
+          {errors.photoUrl3 && (
+            <span className="error-message">This field is required</span>
+          )}
+        </div>
+        <div className="">
+          <label htmlFor="photo" className="form-label  ">
+            Photo Url 4
+          </label>
+          <input
+            type="url"
+            className="form-control"
+            id="photo"
+            {...register('photoUrl4', { required: true })}
+          />
+          {errors.photoUrl4 && (
             <span className="error-message">This field is required</span>
           )}
         </div>

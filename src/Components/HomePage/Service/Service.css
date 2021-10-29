@@ -1,0 +1,48 @@
+.service-card {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  margin: 10px;
+}
+
+.service-img {
+  overflow: hidden;
+}
+
+.service-photo {
+  width: 500px;
+  height: 300px;
+}
+
+.service-card:hover .service-photo {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  overflow: hidden;
+}
+
+.service-name,
+.service-descrip {
+  color: white;
+}
+
+.service-info {
+  width: 450px;
+  padding: 10px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.469);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  display: none;
+}
+
+.service-card:hover .service-info {
+  display: block;
+}
