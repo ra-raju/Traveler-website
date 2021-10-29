@@ -3,6 +3,7 @@ import './App.css';
 import Home from './Components/HomePage/Home/Home';
 import Login from './Components/Registration/Login/Login';
 import Header from './Components/SharedPage/Header/Header';
+import TravelForm from './Components/TravelForm/TravelForm';
 import AuthProvider from './Context/AuthProvider';
 
 function App() {
@@ -15,11 +16,14 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path="/home">
+            <Route path="/home">
               <Home />
             </Route>
-            <Route exact path="/login">
+            <Route path="/login">
               <Login />
+            </Route>
+            <Route path="/travelform">
+              <TravelForm />
             </Route>
           </Switch>
         </BrowserRouter>

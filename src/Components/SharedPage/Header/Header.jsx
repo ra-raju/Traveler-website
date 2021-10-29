@@ -8,7 +8,7 @@ const Header = () => {
   console.log(user);
   return (
     <div>
-      <nav className="navbar navbar-expand-lg   fixed-top  navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg  sticky-top navbar-light bg-light">
         <div className="container-fluid">
           <a className="navbar-brand" href="/home">
             Traveler
