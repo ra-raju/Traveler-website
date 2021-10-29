@@ -1,10 +1,11 @@
 import React from 'react';
+import useFirebase from '../../../Hooks/useFirebase';
 // import useAuth from '../../../Hooks/useAuth';
 import './Header.css';
 
 const Header = () => {
-  //   const { user } = useAuth();
-  //   console.log(user);
+  const { user, logOut } = useFirebase();
+  console.log(user);
   return (
     <div>
       <nav className="navbar navbar-expand-lg  sticky-top navbar-light bg-light">
@@ -45,27 +46,30 @@ const Header = () => {
                 </a>
               </li>
             </ul>
-            <div className="">
-              <button
-                className="btn btn-sm btn-outline-secondary user-btn"
-                type="button"
-              >
-                My Order
-              </button>
-              <button
-                className="btn btn-sm btn-outline-secondary user-btn"
-                type="button"
-              >
-                Manage All Order
-              </button>
-              <img src="" alt="img" className="user-img" />
-              <button
-                className="btn btn-sm btn-outline-secondary user-btn"
-                type="button"
-              >
-                Log Out
-              </button>
-            </div>
+            {user.email && (
+              <div className="">
+                <button
+                  className="btn btn-sm btn-outline-secondary user-btn"
+                  type="button"
+                >
+                  My Order
+                </button>
+                <button
+                  className="btn btn-sm btn-outline-secondary user-btn"
+                  type="button"
+                >
+                  Manage All Order
+                </button>
+                <img src={user.photoURL} alt="img" className="user-img" />
+                <button
+                  className="btn btn-sm btn-outline-secondary user-btn"
+                  type="button"
+                  onClick={logOut}
+                >
+                  Log Out
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </nav>
