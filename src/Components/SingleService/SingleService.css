@@ -1,0 +1,16 @@
+.photo-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceImg {
+  width: 400px;
+  height: 300px;
+  margin: 15px;
+}
+
+.serviceImg:hover {
+  border: 5px solid gray;
+}

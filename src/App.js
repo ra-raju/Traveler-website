@@ -4,6 +4,7 @@ import Home from './Components/HomePage/Home/Home';
 import Login from './Components/Registration/Login/Login';
 import ServiceForm from './Components/ServiceForm/ServiceForm';
 import Header from './Components/SharedPage/Header/Header';
+import SingleService from './Components/SingleService/SingleService';
 import TravelForm from './Components/TravelForm/TravelForm';
 import AuthProvider from './Context/AuthProvider';
 
@@ -28,6 +29,9 @@ function App() {
             </Route>
             <Route path="/serviceform">
               <ServiceForm />
+            </Route>
+            <Route exact path="/service/:id">
+              <SingleService />
             </Route>
           </Switch>
         </BrowserRouter>
