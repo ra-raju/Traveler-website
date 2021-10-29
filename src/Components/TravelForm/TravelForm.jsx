@@ -19,7 +19,7 @@ const TravelForm = () => {
       <form className="row g-3 container" onSubmit={handleSubmit(onSubmit)}>
         {/* email */}
         <div className="col-md-6">
-          <label for="inputEmail4" className="form-label text-white">
+          <label htmlFor="inputEmail4" className="form-label text-white">
             Email
           </label>
           <input
@@ -33,7 +33,7 @@ const TravelForm = () => {
         </div>
         {/* phone number */}
         <div className="col-md-6">
-          <label for="phone" className="form-label text-white">
+          <label htmlFor="phone" className="form-label text-white">
             Phone
           </label>
           <input
@@ -48,7 +48,7 @@ const TravelForm = () => {
         </div>
         {/* present address */}
         <div className="col-12">
-          <label for="inputAddress" className="form-label text-white">
+          <label htmlFor="inputAddress" className="form-label text-white">
             Address
           </label>
           <input
@@ -64,7 +64,7 @@ const TravelForm = () => {
         </div>
         {/* destination */}
         <div className="col-12">
-          <label for="inputAddress2" className="form-label text-white">
+          <label htmlFor="inputAddress2" className="form-label text-white">
             Destination
           </label>
           <input
@@ -80,7 +80,7 @@ const TravelForm = () => {
         </div>
         {/* start journey */}
         <div className="col-md-6">
-          <label for="inputCity" className="form-label text-white">
+          <label htmlFor="inputCity" className="form-label text-white">
             Start Journey
           </label>
           <input
@@ -94,7 +94,7 @@ const TravelForm = () => {
         </div>
         {/* end journey */}
         <div className="col-md-6">
-          <label for="inputCity" className="form-label text-white">
+          <label htmlFor="inputCity" className="form-label text-white">
             End Journey
           </label>
           <input
@@ -108,7 +108,7 @@ const TravelForm = () => {
         </div>
         {/* Adult member */}
         <div className="col-md-6">
-          <label className="visually-hidden" for="autoSizingSelect">
+          <label className="visually-hidden" htmlFor="autoSizingSelect">
             Adult Member
           </label>
           <select
@@ -131,7 +131,7 @@ const TravelForm = () => {
         </div>
         {/* Child member */}
         <div className="col-md-6">
-          <label className="visually-hidden" for="autoSizingSelect">
+          <label className="visually-hidden" htmlFor="autoSizingSelect">
             Child Member
           </label>
           <select

@@ -18,7 +18,7 @@ const HeroSection = () => {
             type="button"
             onClick={travelFormHandler}
           >
-            Start Your Journey
+            Booking Now
           </button>
         </div>
       </div>
