@@ -2,14 +2,28 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import useAuth from '../../Hooks/useAuth';
 import './TravelForm.css';
+const axios = require('axios').default;
 
 const TravelForm = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    data.status = 'pending';
+    axios
+      .post('http://localhost:5000/submittedtour', data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert('Thanks! Your form is Submitted');
+          reset();
+        }
+      })
+      .catch((error) => console.log(error));
+  };
   const { user } = useAuth();
   return (
     <div className="travel-form">
@@ -116,7 +130,7 @@ const TravelForm = () => {
             id="autoSizingSelect"
             {...register('adult', { required: true })}
           >
-            <option selected>Adult...</option>
+            <option defaultValue>Adult...</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -139,7 +153,7 @@ const TravelForm = () => {
             id="autoSizingSelect"
             {...register('child', { required: true })}
           >
-            <option selected>Child...</option>
+            <option defaultValue>Child...</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
