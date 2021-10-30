@@ -1,10 +1,15 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 import useFirebase from '../../../Hooks/useFirebase';
 // import useAuth from '../../../Hooks/useAuth';
 import './Header.css';
 
 const Header = () => {
   const { user, logOut } = useFirebase();
+  const history = useHistory();
+  const handleMyorder = () => {
+    history.push('/myorders');
+  };
   console.log(user);
   return (
     <div>
@@ -51,6 +56,7 @@ const Header = () => {
                 <button
                   className="btn btn-sm btn-outline-secondary user-btn"
                   type="button"
+                  onClick={handleMyorder}
                 >
                   My Order
                 </button>

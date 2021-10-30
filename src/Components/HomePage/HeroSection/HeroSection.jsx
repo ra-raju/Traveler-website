@@ -10,8 +10,12 @@ const HeroSection = () => {
   return (
     <div className="hero-section">
       <div className="hero-content">
-        <h1>lifelong memories just a few seconds away</h1>
-        <p>let start your journey with us, your dream will come true</p>
+        <h1 className="hero-title">
+          lifelong memories just a few seconds away
+        </h1>
+        <p className="hero-subtitle">
+          let start your journey with us, your dream will come true
+        </p>
         <div className="d-grid gap-2 col-6 mx-auto">
           <button
             className="btn btn-primary"

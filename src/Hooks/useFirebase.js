@@ -93,7 +93,7 @@ const useFirebase = () => {
         setUser({});
       })
       .catch((error) => {
-        // An error happened.
+        console.log(error.message);
       })
       .finally(() => setIsLoading(false));
   };

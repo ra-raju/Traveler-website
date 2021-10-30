@@ -5,6 +5,7 @@ import './TravelForm.css';
 const axios = require('axios').default;
 
 const TravelForm = () => {
+  const { user } = useAuth();
   const {
     register,
     handleSubmit,
@@ -24,13 +25,27 @@ const TravelForm = () => {
       })
       .catch((error) => console.log(error));
   };
-  const { user } = useAuth();
+
   return (
     <div className="travel-form">
       <h1>Welcome {user.displayName}</h1>
       <h4>Fill this form, we contact with you very soon</h4>
 
       <form className="row g-3 container" onSubmit={handleSubmit(onSubmit)}>
+        {/* name */}
+        <div className="col-md-12">
+          <label htmlFor="name" className="form-label text-white">
+            Full Name
+          </label>
+          <input
+            type="email"
+            className="form-control"
+            id="name"
+            value={user.displayName}
+            readOnly
+            {...register('name')}
+          />
+        </div>
         {/* email */}
         <div className="col-md-6">
           <label htmlFor="inputEmail4" className="form-label text-white">

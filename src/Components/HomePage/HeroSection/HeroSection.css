@@ -15,8 +15,8 @@
   width: 500px;
 }
 
-.hero-content h1,
-p {
+.hero-title,
+.hero-subtitle {
   color: white;
   text-transform: capitalize;
 }

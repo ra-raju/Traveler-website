@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Home from './Components/HomePage/Home/Home';
+import MyOrder from './Components/MyOrder/MyOrder';
 import Login from './Components/Registration/Login/Login';
 import ServiceForm from './Components/ServiceForm/ServiceForm';
 import Header from './Components/SharedPage/Header/Header';
@@ -32,6 +33,9 @@ function App() {
             </Route>
             <Route exact path="/service/:id">
               <SingleService />
+            </Route>
+            <Route path="/myorders">
+              <MyOrder />
             </Route>
           </Switch>
         </BrowserRouter>
