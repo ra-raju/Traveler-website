@@ -3,6 +3,7 @@ import './App.css';
 import Home from './Components/HomePage/Home/Home';
 import ManageOrder from './Components/ManageOrder/ManageOrder';
 import MyOrder from './Components/MyOrder/MyOrder';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Login from './Components/Registration/Login/Login';
 import ServiceForm from './Components/ServiceForm/ServiceForm';
 import Header from './Components/SharedPage/Header/Header';
@@ -26,21 +27,21 @@ function App() {
             <Route path="/login">
               <Login />
             </Route>
-            <Route path="/travelform">
+            <PrivateRoute path="/travelform">
               <TravelForm />
-            </Route>
-            <Route path="/serviceform">
+            </PrivateRoute>
+            <PrivateRoute path="/serviceform">
               <ServiceForm />
-            </Route>
-            <Route exact path="/service/:id">
+            </PrivateRoute>
+            <PrivateRoute exact path="/service/:id">
               <SingleService />
-            </Route>
-            <Route path="/myorders">
+            </PrivateRoute>
+            <PrivateRoute path="/myorders">
               <MyOrder />
-            </Route>
-            <Route path="/manageorders">
+            </PrivateRoute>
+            <PrivateRoute path="/manageorders">
               <ManageOrder />
-            </Route>
+            </PrivateRoute>
           </Switch>
         </BrowserRouter>
       </AuthProvider>

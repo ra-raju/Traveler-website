@@ -12,7 +12,7 @@ const Services = () => {
       .catch((error) => console.log(error.message));
   }, []);
   return (
-    <div>
+    <div id="services">
       <h1 className="text-center py-4">Our Services</h1>
       <div className="services-container">
         {services.map((service) => (

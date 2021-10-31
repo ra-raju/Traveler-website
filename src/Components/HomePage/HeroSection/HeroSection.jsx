@@ -8,7 +8,7 @@ const HeroSection = () => {
     history.push('/travelform');
   };
   return (
-    <div className="hero-section">
+    <div className="hero-section" id="hero">
       <div className="hero-content">
         <h1 className="hero-title">
           lifelong memories just a few seconds away

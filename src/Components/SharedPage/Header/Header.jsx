@@ -1,5 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import useFirebase from '../../../Hooks/useFirebase';
 import './Header.css';
 
@@ -36,26 +38,36 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a
+                <Link
                   className="nav-link active"
                   aria-current="page"
-                  href="/home#home"
+                  to="/home"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/home#features">
-                  Features
-                </a>
+                <HashLink className="nav-link" to="/home#services">
+                  Services
+                </HashLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/login">
+                <HashLink className="nav-link" to="/home#about">
+                  About us
+                </HashLink>
+              </li>
+              <li className="nav-item">
+                <HashLink className="nav-link" to="/home#contact">
+                  Contact
+                </HashLink>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/login">
                   Login
-                </a>
+                </Link>
               </li>
             </ul>
-            {user.email && (
+            {user?.email && (
               <div className="">
                 <button
                   className="btn btn-sm btn-outline-secondary user-btn"
