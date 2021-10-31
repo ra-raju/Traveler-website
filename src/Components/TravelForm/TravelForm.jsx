@@ -4,7 +4,9 @@ import useAuth from '../../Hooks/useAuth';
 import './TravelForm.css';
 const axios = require('axios').default;
 
-const TravelForm = () => {
+const TravelForm = (props) => {
+  // const { place } = props.data;
+  console.log(props);
   const { user } = useAuth();
   const {
     register,
