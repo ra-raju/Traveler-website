@@ -1,0 +1,20 @@
+.notfoundpage {
+  height: 100vh;
+  width: 100%;
+  background-image: url('./404.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.notfound-btn {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  display: inline-block;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}

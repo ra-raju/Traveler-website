@@ -3,6 +3,7 @@ import './App.css';
 import Home from './Components/HomePage/Home/Home';
 import ManageOrder from './Components/ManageOrder/ManageOrder';
 import MyOrder from './Components/MyOrder/MyOrder';
+import NotFoundPage from './Components/NotFoundPage/NotFoundPage';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Login from './Components/Registration/Login/Login';
 import ServiceForm from './Components/ServiceForm/ServiceForm';
@@ -42,6 +43,9 @@ function App() {
             <PrivateRoute path="/manageorders">
               <ManageOrder />
             </PrivateRoute>
+            <Route path="*">
+              <NotFoundPage />
+            </Route>
           </Switch>
         </BrowserRouter>
       </AuthProvider>
