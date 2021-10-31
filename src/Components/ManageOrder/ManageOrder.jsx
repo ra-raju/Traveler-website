@@ -35,7 +35,7 @@ const ManageOrder = () => {
         Add Service
       </button>
       {loading ? (
-        <div class="d-flex justify-content-center align-items-center vh-100 mx-5">
+        <div class="d-flex justify-content-center align-items-center vh-100 mx-4">
           <strong>Loading...</strong>
           <div
             class="spinner-border ms-auto"

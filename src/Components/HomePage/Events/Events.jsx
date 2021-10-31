@@ -21,7 +21,7 @@ const Events = () => {
     <div>
       <h1 className="text-center">Upcomming Events</h1>
       {loading ? (
-        <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="d-flex justify-content-center align-items-center vh-100 mx-4">
           <strong>Loading...</strong>
           <div
             class="spinner-border ms-auto"

@@ -21,7 +21,7 @@ const Services = () => {
     <div id="services">
       <h1 className="text-center py-4">Our Services</h1>
       {loading ? (
-        <div class="d-flex justify-content-center align-items-center vh-100 ">
+        <div class="d-flex justify-content-center align-items-center vh-100 mx-4 ">
           <strong>Loading...</strong>
           <div
             class="spinner-border ms-auto"
