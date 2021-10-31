@@ -12,7 +12,7 @@
 }
 
 .hero-content {
-  width: 500px;
+  width: 600px;
 }
 
 .hero-title,
@@ -21,19 +21,25 @@
   text-transform: capitalize;
 }
 
-.hero-content h1 {
+.hero-title {
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
   letter-spacing: 1.5px;
+  text-align: center;
 }
 
-.hero-content p {
+.hero-subtitle {
   font-weight: 700;
   margin: 15px 0;
+  text-align: center;
 }
 
 @media screen and (max-width: 500px) {
   .hero-content {
     padding: 0 15px;
+    width: 450px;
+  }
+  .hero-title {
+    font-size: 25px;
   }
 }

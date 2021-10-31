@@ -22,7 +22,7 @@ const MyOrder = () => {
     <div>
       <h1 className="text-center py-3">My Journeys</h1>
       {loading ? (
-        <div class="d-flex align-items-center mx-4">
+        <div class="d-flex justify-content-center align-items-center vh-100 mx-4">
           <strong>Loading...</strong>
           <div
             class="spinner-border ms-auto"

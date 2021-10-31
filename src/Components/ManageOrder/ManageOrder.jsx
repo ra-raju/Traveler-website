@@ -15,7 +15,7 @@ const ManageOrder = () => {
       .then((data) => {
         setTours(data);
         if (data) {
-          isLoading(true);
+          isLoading(false);
         }
       })
       .catch((error) => console.log(error.message));
@@ -35,7 +35,7 @@ const ManageOrder = () => {
         Add Service
       </button>
       {loading ? (
-        <div class="d-flex align-items-center mx-4">
+        <div class="d-flex justify-content-center align-items-center vh-100 mx-5">
           <strong>Loading...</strong>
           <div
             class="spinner-border ms-auto"
