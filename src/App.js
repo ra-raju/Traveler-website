@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Home from './Components/HomePage/Home/Home';
+import ManageOrder from './Components/ManageOrder/ManageOrder';
 import MyOrder from './Components/MyOrder/MyOrder';
 import Login from './Components/Registration/Login/Login';
 import ServiceForm from './Components/ServiceForm/ServiceForm';
@@ -36,6 +37,9 @@ function App() {
             </Route>
             <Route path="/myorders">
               <MyOrder />
+            </Route>
+            <Route path="/manageorders">
+              <ManageOrder />
             </Route>
           </Switch>
         </BrowserRouter>
