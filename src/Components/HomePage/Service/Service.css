@@ -8,11 +8,17 @@
 
 .service-img {
   overflow: hidden;
+  width: 500px;
 }
 
 .service-photo {
   width: 500px;
   height: 300px;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  -o-transition: 0.5s all;
 }
 
 .service-card:hover .service-photo {
@@ -42,8 +48,27 @@
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   display: none;
+  transition: 0.8s all;
+  -webkit-transition: 0.8s all;
+  -moz-transition: 0.8s all;
+  -ms-transition: 0.8s all;
+  -o-transition: 0.8s all;
 }
 
 .service-card:hover .service-info {
   display: block;
+}
+
+@media screen and (max-width: 500px) {
+  .service-card {
+    width: 100%;
+    margin: 0;
+  }
+  .service-img,
+  .service-photo {
+    width: 350px;
+  }
+  .service-info {
+    width: 300px;
+  }
 }

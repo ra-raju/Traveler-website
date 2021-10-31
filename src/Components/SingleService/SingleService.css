@@ -9,8 +9,26 @@
   width: 400px;
   height: 300px;
   margin: 15px;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  border: 5px solid gray;
 }
 
 .serviceImg:hover {
-  border: 5px solid gray;
+  border: none;
+  transition: 0.2s all;
+  -webkit-transition: 0.2s all;
+  -moz-transition: 0.2s all;
+  -ms-transition: 0.2s all;
+  -o-transition: 0.2s all;
+}
+
+@media screen and (max-width: 500px) {
+  .serviceImg {
+    width: 350px;
+    margin: 15px 0;
+  }
 }
