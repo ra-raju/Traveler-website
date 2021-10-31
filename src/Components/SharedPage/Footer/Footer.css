@@ -1,0 +1,17 @@
+.footer {
+  background-color: rgba(0, 0, 0, 0.676);
+  width: 100%;
+  padding: 10px 30px;
+}
+
+.footer-container {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 500px) {
+  .footer-container {
+    flex-direction: column;
+  }
+}

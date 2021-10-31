@@ -9,9 +9,9 @@ const NotFoundPage = () => {
   };
   return (
     <div className="notfoundpage">
-      <div class="d-grid gap-2 col-3 mx-auto notfound-btn">
+      <div className="d-grid gap-2 col-3 mx-auto notfound-btn">
         <button
-          class="btn btn-primary"
+          className="btn btn-primary"
           type="button"
           onClick={handleBackHomepage}
         >

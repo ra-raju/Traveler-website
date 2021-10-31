@@ -1,0 +1,14 @@
+.contact-form-section {
+  width: 500px;
+  margin: 0 10px;
+  border: 2px solid gray;
+  padding: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .contact-form-section {
+    margin: 20px 0;
+    width: 350px;
+    border: none;
+  }
+}

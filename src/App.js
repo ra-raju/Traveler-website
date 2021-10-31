@@ -7,6 +7,7 @@ import NotFoundPage from './Components/NotFoundPage/NotFoundPage';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Login from './Components/Registration/Login/Login';
 import ServiceForm from './Components/ServiceForm/ServiceForm';
+import Footer from './Components/SharedPage/Footer/Footer';
 import Header from './Components/SharedPage/Header/Header';
 import SingleService from './Components/SingleService/SingleService';
 import TravelForm from './Components/TravelForm/TravelForm';
@@ -47,6 +48,7 @@ function App() {
               <NotFoundPage />
             </Route>
           </Switch>
+          <Footer />
         </BrowserRouter>
       </AuthProvider>
     </div>

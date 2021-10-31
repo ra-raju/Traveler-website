@@ -24,7 +24,7 @@ const ServiceForm = () => {
       <form className="container" onSubmit={handleSubmit(onSubmit)}>
         {/* service name */}
         <div className="">
-          <label htmlFor="serviceName" className="form-label">
+          <label htmlhtmlFor="serviceName" className="form-label">
             Service Name
           </label>
           <input
@@ -39,7 +39,7 @@ const ServiceForm = () => {
         </div>{' '}
         {/* phone number */}
         <div className="">
-          <label htmlFor="descrip" className="form-label">
+          <label htmlhtmlFor="descrip" className="form-label">
             Service Description
           </label>
           <textarea
@@ -54,7 +54,7 @@ const ServiceForm = () => {
         </div>
         {/* price*/}
         <div className="">
-          <label htmlFor="inputAddress" className="form-label">
+          <label htmlhtmlFor="inputAddress" className="form-label">
             Price
           </label>
           <input
@@ -68,7 +68,7 @@ const ServiceForm = () => {
         </div>
         {/* photo */}
         <div className="">
-          <label htmlFor="photo" className="form-label  ">
+          <label htmlhtmlFor="photo" className="form-label  ">
             Photo Url 1
           </label>
           <input
@@ -82,7 +82,7 @@ const ServiceForm = () => {
           )}
         </div>
         <div className="">
-          <label htmlFor="photo" className="form-label  ">
+          <label htmlhtmlFor="photo" className="form-label  ">
             Photo Url 2
           </label>
           <input
@@ -96,7 +96,7 @@ const ServiceForm = () => {
           )}
         </div>
         <div className="">
-          <label htmlFor="photo" className="form-label  ">
+          <label htmlhtmlFor="photo" className="form-label  ">
             Photo Url 3
           </label>
           <input
@@ -110,7 +110,7 @@ const ServiceForm = () => {
           )}
         </div>
         <div className="">
-          <label htmlFor="photo" className="form-label  ">
+          <label htmlhtmlFor="photo" className="form-label  ">
             Photo Url 4
           </label>
           <input
