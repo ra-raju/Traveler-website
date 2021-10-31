@@ -17,7 +17,7 @@ const ManageOrderList = (props) => {
 
   //delete post
   const handleRemoveJourney = (id) => {
-    const uri = `http://localhost:5000/removejourney/${id}`;
+    const uri = `https://frightful-dracula-76672.herokuapp.com/removejourney/${id}`;
     const process = window.confirm('Are You Sure for Cancel Your Journey?');
     if (process) {
       fetch(uri, {
@@ -28,7 +28,6 @@ const ManageOrderList = (props) => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
           if (data.deletedCount > 0) {
             alert('DELETED! Your Journey Canceled Successfully');
           }
@@ -37,8 +36,7 @@ const ManageOrderList = (props) => {
     }
   };
   const handleStatus = (id) => {
-    console.log(id);
-    const uri = `http://localhost:5000/updatestatus/${id}`;
+    const uri = `https://frightful-dracula-76672.herokuapp.com/updatestatus/${id}`;
     fetch(uri, {
       method: 'PUT',
       headers: {

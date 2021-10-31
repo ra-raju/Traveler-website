@@ -12,12 +12,9 @@ const Contact = () => {
     reset,
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
-
     axios
-      .post('http://localhost:5000/message', data)
+      .post('https://frightful-dracula-76672.herokuapp.com/message', data)
       .then((res) => {
-        console.log(res);
         if (res.data.insertedId) {
           setIsSuccess(true);
           reset();

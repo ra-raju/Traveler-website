@@ -9,13 +9,13 @@ const Footer = () => {
           <h5>Contact</h5>
           <p>
             <span>
-              <i class="fas fa-mobile-alt"></i>
+              <i className="fas fa-mobile-alt"></i>
             </span>{' '}
             +8801867100385
           </p>
           <p>
             <span>
-              <i class="fas fa-envelope"></i>
+              <i className="fas fa-envelope"></i>
             </span>{' '}
             robeyoulawal@gmail.com
           </p>

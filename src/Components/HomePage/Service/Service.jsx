@@ -3,7 +3,6 @@ import { useHistory } from 'react-router';
 import './Service.css';
 
 const Service = (props) => {
-  // console.log(props);
   const { serviceName, description, photoUrl1, price, _id } = props.service;
 
   const history = useHistory();

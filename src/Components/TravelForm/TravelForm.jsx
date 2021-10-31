@@ -4,9 +4,7 @@ import useAuth from '../../Hooks/useAuth';
 import './TravelForm.css';
 const axios = require('axios').default;
 
-const TravelForm = (props) => {
-  // const { place } = props.data;
-  console.log(props);
+const TravelForm = () => {
   const { user } = useAuth();
   const {
     register,
@@ -18,7 +16,7 @@ const TravelForm = (props) => {
     console.log(data);
     data.status = 'pending';
     axios
-      .post('http://localhost:5000/submittedtour', data)
+      .post('https://frightful-dracula-76672.herokuapp.com/submittedtour', data)
       .then((res) => {
         if (res.data.insertedId) {
           alert('Thanks! Your form is Submitted');
@@ -36,7 +34,7 @@ const TravelForm = (props) => {
       <form className="row g-3 container" onSubmit={handleSubmit(onSubmit)}>
         {/* name */}
         <div className="col-md-12">
-          <label htmlhtmlFor="name" className="form-label text-white">
+          <label htmlFor="name" className="form-label text-white">
             Full Name
           </label>
           <input
@@ -50,7 +48,7 @@ const TravelForm = (props) => {
         </div>
         {/* email */}
         <div className="col-md-6">
-          <label htmlhtmlFor="inputEmail4" className="form-label text-white">
+          <label htmlFor="inputEmail4" className="form-label text-white">
             Email
           </label>
           <input
@@ -64,7 +62,7 @@ const TravelForm = (props) => {
         </div>
         {/* phone number */}
         <div className="col-md-6">
-          <label htmlhtmlFor="phone" className="form-label text-white">
+          <label htmlFor="phone" className="form-label text-white">
             Phone
           </label>
           <input
@@ -79,7 +77,7 @@ const TravelForm = (props) => {
         </div>
         {/* present address */}
         <div className="col-12">
-          <label htmlhtmlFor="inputAddress" className="form-label text-white">
+          <label htmlFor="inputAddress" className="form-label text-white">
             Address
           </label>
           <input
@@ -95,7 +93,7 @@ const TravelForm = (props) => {
         </div>
         {/* destination */}
         <div className="col-12">
-          <label htmlhtmlFor="inputAddress2" className="form-label text-white">
+          <label htmlFor="inputAddress2" className="form-label text-white">
             Destination
           </label>
           <input
@@ -111,7 +109,7 @@ const TravelForm = (props) => {
         </div>
         {/* start journey */}
         <div className="col-md-6">
-          <label htmlhtmlFor="inputCity" className="form-label text-white">
+          <label htmlFor="inputCity" className="form-label text-white">
             Start Journey
           </label>
           <input
@@ -125,7 +123,7 @@ const TravelForm = (props) => {
         </div>
         {/* end journey */}
         <div className="col-md-6">
-          <label htmlhtmlFor="inputCity" className="form-label text-white">
+          <label htmlFor="inputCity" className="form-label text-white">
             End Journey
           </label>
           <input
@@ -139,7 +137,7 @@ const TravelForm = (props) => {
         </div>
         {/* Adult member */}
         <div className="col-md-6">
-          <label className="visually-hidden" htmlhtmlFor="autoSizingSelect">
+          <label className="visually-hidden" htmlFor="autoSizingSelect">
             Adult Member
           </label>
           <select
@@ -162,7 +160,7 @@ const TravelForm = (props) => {
         </div>
         {/* Child member */}
         <div className="col-md-6">
-          <label className="visually-hidden" htmlhtmlFor="autoSizingSelect">
+          <label className="visually-hidden" htmlFor="autoSizingSelect">
             Child Member
           </label>
           <select

@@ -2,7 +2,6 @@ import {
   getAuth,
   GoogleAuthProvider,
   onAuthStateChanged,
-  // signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
 } from 'firebase/auth';
@@ -56,11 +55,9 @@ const useFirebase = () => {
     return () => unsubscribe;
   }, []);
   return {
-    // signUpUsingPassword,
     user,
     signInUsingGoogle,
     error,
-    // loginUsingPassword,
     logOut,
     isLoading,
   };

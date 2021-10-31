@@ -8,7 +8,7 @@ const SingleService = () => {
   const history = useHistory();
 
   useEffect(() => {
-    const uri = `http://localhost:5000/service/${id}`;
+    const uri = `https://frightful-dracula-76672.herokuapp.com/service/${id}`;
     fetch(uri)
       .then((res) => res.json())
       .then((data) => setService(data))

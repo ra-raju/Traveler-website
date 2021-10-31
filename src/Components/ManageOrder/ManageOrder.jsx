@@ -5,12 +5,19 @@ import './ManangeOrder.css';
 
 const ManageOrder = () => {
   const [tours, setTours] = useState([]);
+  const [loading, isLoading] = useState(true);
+
   const history = useHistory();
 
   useEffect(() => {
-    fetch('http://localhost:5000/allorders')
+    fetch('https://frightful-dracula-76672.herokuapp.com/allorders')
       .then((res) => res.json())
-      .then((data) => setTours(data))
+      .then((data) => {
+        setTours(data);
+        if (data) {
+          isLoading(true);
+        }
+      })
       .catch((error) => console.log(error.message));
   }, [tours]);
 
@@ -27,11 +34,22 @@ const ManageOrder = () => {
       >
         Add Service
       </button>
-      <div className="orders-container">
-        {tours.map((tour) => (
-          <ManageOrderList key={tour._id} tour={tour} />
-        ))}
-      </div>
+      {loading ? (
+        <div class="d-flex align-items-center mx-4">
+          <strong>Loading...</strong>
+          <div
+            class="spinner-border ms-auto"
+            role="status"
+            aria-hidden="true"
+          ></div>
+        </div>
+      ) : (
+        <div className="orders-container">
+          {tours.map((tour) => (
+            <ManageOrderList key={tour._id} tour={tour} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

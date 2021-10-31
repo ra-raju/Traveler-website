@@ -9,14 +9,15 @@ const ServiceForm = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    // console.log(data);
-    axios.post('http://localhost:5000/addservice', data).then((res) => {
-      const id = res.data.insertedId;
-      if (id) {
-        alert('service is added!');
-        reset();
-      }
-    });
+    axios
+      .post('https://frightful-dracula-76672.herokuapp.com/addservice', data)
+      .then((res) => {
+        const id = res.data.insertedId;
+        if (id) {
+          alert('service is added!');
+          reset();
+        }
+      });
   };
   return (
     <div>
@@ -24,7 +25,7 @@ const ServiceForm = () => {
       <form className="container" onSubmit={handleSubmit(onSubmit)}>
         {/* service name */}
         <div className="">
-          <label htmlhtmlFor="serviceName" className="form-label">
+          <label htmlFor="serviceName" className="form-label">
             Service Name
           </label>
           <input
@@ -39,7 +40,7 @@ const ServiceForm = () => {
         </div>{' '}
         {/* phone number */}
         <div className="">
-          <label htmlhtmlFor="descrip" className="form-label">
+          <label htmlFor="descrip" className="form-label">
             Service Description
           </label>
           <textarea
@@ -54,7 +55,7 @@ const ServiceForm = () => {
         </div>
         {/* price*/}
         <div className="">
-          <label htmlhtmlFor="inputAddress" className="form-label">
+          <label htmlFor="inputAddress" className="form-label">
             Price
           </label>
           <input
@@ -68,7 +69,7 @@ const ServiceForm = () => {
         </div>
         {/* photo */}
         <div className="">
-          <label htmlhtmlFor="photo" className="form-label  ">
+          <label htmlFor="photo" className="form-label  ">
             Photo Url 1
           </label>
           <input
@@ -82,7 +83,7 @@ const ServiceForm = () => {
           )}
         </div>
         <div className="">
-          <label htmlhtmlFor="photo" className="form-label  ">
+          <label htmlFor="photo" className="form-label  ">
             Photo Url 2
           </label>
           <input
@@ -96,7 +97,7 @@ const ServiceForm = () => {
           )}
         </div>
         <div className="">
-          <label htmlhtmlFor="photo" className="form-label  ">
+          <label htmlFor="photo" className="form-label  ">
             Photo Url 3
           </label>
           <input
@@ -110,7 +111,7 @@ const ServiceForm = () => {
           )}
         </div>
         <div className="">
-          <label htmlhtmlFor="photo" className="form-label  ">
+          <label htmlFor="photo" className="form-label  ">
             Photo Url 4
           </label>
           <input

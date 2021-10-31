@@ -18,8 +18,8 @@ const Header = () => {
   };
 
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg  sticky-top navbar-light bg-light">
+    <div className=" sticky-top">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <a className="navbar-brand" href="/home">
             Traveler

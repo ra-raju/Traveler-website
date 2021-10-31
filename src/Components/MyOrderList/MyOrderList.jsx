@@ -14,7 +14,7 @@ const MyOrderList = (props) => {
     _id,
   } = props.tour;
   const handleRemoveJourney = (id) => {
-    const uri = `http://localhost:5000/removejourney/${id}`;
+    const uri = `https://frightful-dracula-76672.herokuapp.com/removejourney/${id}`;
     const process = window.confirm('Are You Sure for Cancel Your Journey?');
     if (process) {
       fetch(uri, {
@@ -25,7 +25,6 @@ const MyOrderList = (props) => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
           if (data.deletedCount > 0) {
             alert('DELETED! Your Journey Canceled Successfully');
           }

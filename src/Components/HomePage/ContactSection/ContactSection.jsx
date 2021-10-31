@@ -5,7 +5,7 @@ import './ContactSection.css';
 
 const ContactSection = () => {
   return (
-    <div>
+    <div id="contact">
       <h1 className="text-center py-3">Contact us</h1>
       <div className="contact-section">
         <Map />

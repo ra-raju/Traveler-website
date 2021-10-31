@@ -5,7 +5,9 @@ import img from './about.jpg';
 const About = () => {
   return (
     <div>
-      <h1 className="text-center py-4">About us</h1>
+      <h1 className="text-center py-4" id="about">
+        About us
+      </h1>
       <div className="about-container">
         <div className="about-img">
           <img src={img} alt="" />
