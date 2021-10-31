@@ -62,7 +62,7 @@
 @media screen and (max-width: 500px) {
   .service-card {
     width: 100%;
-    margin: 0;
+    margin: 20px 0;
   }
   .service-img,
   .service-photo {
